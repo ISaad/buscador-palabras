@@ -65,7 +65,7 @@
       padding: 10px;
       text-align: left;
       display: none; /* Ocultamos los resultados inicialmente */
-      width: 90%; /* Ancho de los resultados en móviles */
+      width: 80%; /* Reducción del ancho */
       max-width: 400px; /* Limita el ancho máximo */
     }
 
@@ -105,8 +105,10 @@
 
       .resultado {
         max-height: 200px; /* Limita la altura de los resultados en pantallas pequeñas */
-        width: 100%; /* Ancho completo en móviles */
-        max-width: none; /* Evita que el ancho se limite */
+        width: 90%; /* Ancho reducido */
+        margin-left: auto; /* Centra el contenedor de resultados */
+        margin-right: auto; /* Centra el contenedor de resultados */
+        max-width: 350px; /* Limita el ancho máximo para evitar que ocupe toda la pantalla */
       }
     }
 
