@@ -19,6 +19,6 @@ document.getElementById("inputTexto").addEventListener("input", function () {
   const resultados = palabras.filter(p => p.startsWith(prefijo));
   
   const lista = document.getElementById("resultado");
-  if 
+  
   lista.innerHTML = resultados.map(p => `<li>${p}</li>`).join("");
 });
