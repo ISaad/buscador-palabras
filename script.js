@@ -14,7 +14,7 @@ document.getElementById("inputTexto").addEventListener("input", function () {
   // Si la entrada está vacía, no mostrar resultados
   if (prefijo === "") {
     document.getElementById("resultado").innerHTML = "";
-    document.querySelector(".resultado").classList.remove("visible");
+    document.querySelector(".resultado").style.display = "none"; // Ocultamos los resultados cuando no hay entrada
     return;
   }
 
@@ -27,8 +27,8 @@ document.getElementById("inputTexto").addEventListener("input", function () {
 
   // Si hay resultados, mostramos el borde y la lista
   if (resultados.length > 0) {
-    document.querySelector(".resultado").classList.add("visible");
+    document.querySelector(".resultado").style.display = "block"; // Mostramos los resultados si hay coincidencias
   } else {
-    document.querySelector(".resultado").classList.remove("visible");
+    document.querySelector(".resultado").style.display = "none"; // Ocultamos los resultados si no hay coincidencias
   }
 });
