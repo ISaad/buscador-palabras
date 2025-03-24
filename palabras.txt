@@ -1,0 +1,6 @@
+casa
+carro
+caminata
+cielo
+cereza
+cangrejo
