@@ -83,6 +83,29 @@
       background-color: #f1f1f1;
     }
 
+    /* Media query para pantallas pequeñas */
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px;
+        width: 90%;
+        max-width: none; /* Evita que se limite el tamaño del contenedor */
+      }
+
+      h1 {
+        font-size: 1.5rem; /* Ajusta el tamaño del título en pantallas pequeñas */
+        margin-bottom: 10px;
+      }
+
+      input {
+        padding: 10px;
+        font-size: 0.9rem; /* Ajusta el tamaño del input en móviles */
+      }
+
+      .resultado {
+        max-height: 200px; /* Limita la altura de los resultados en pantallas pequeñas */
+      }
+    }
+
   </style>
 </head>
 <body>
