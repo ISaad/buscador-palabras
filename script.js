@@ -8,14 +8,14 @@ fetch("palabras.txt")
   })
   .catch(error => console.error("Error al cargar el archivo de palabras:", error));
 
-// Evento para cuando el usuario escribe en el campo de entrada
 document.getElementById("inputTexto").addEventListener("input", function () {
   const prefijo = this.value.toLowerCase(); // Convierte a minúsculas para que la búsqueda no sea sensible a mayúsculas
 
   // Si la entrada está vacía, no mostrar resultados
   if (prefijo === "") {
     document.getElementById("resultado").innerHTML = "";
-    return;  // Detiene la ejecución si no hay entrada
+    document.querySelector(".resultado").classList.remove("visible");
+    return;
   }
 
   // Filtra las palabras que comienzan con el prefijo
@@ -24,4 +24,11 @@ document.getElementById("inputTexto").addEventListener("input", function () {
   // Muestra los resultados en la lista
   const lista = document.getElementById("resultado");
   lista.innerHTML = resultados.map(p => `<li>${p}</li>`).join(""); // Convierte el array en una lista HTML
+
+  // Si hay resultados, mostramos el borde y la lista
+  if (resultados.length > 0) {
+    document.querySelector(".resultado").classList.add("visible");
+  } else {
+    document.querySelector(".resultado").classList.remove("visible");
+  }
 });
