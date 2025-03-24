@@ -64,6 +64,11 @@
       border-radius: 8px;
       padding: 10px;
       text-align: left;
+      display: none; /* Inicialmente, ocultamos el borde si no hay resultados */
+    }
+
+    .resultado.visible {
+      display: block; /* Solo mostramos el borde cuando haya resultados */
     }
 
     ul {
@@ -86,7 +91,7 @@
 </head>
 <body>
   <div class="container">
-    <h1>Buscador de Palabras</h1>
+    <h1>Palabras que empiezan por...</h1>
     <input type="text" id="inputTexto" placeholder="Escribe para buscar..." />
     <div class="resultado">
       <ul id="resultado"></ul>
