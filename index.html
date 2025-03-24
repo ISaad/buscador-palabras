@@ -65,6 +65,8 @@
       padding: 10px;
       text-align: left;
       display: none; /* Ocultamos los resultados inicialmente */
+      width: 90%; /* Ancho de los resultados en móviles */
+      max-width: 400px; /* Limita el ancho máximo */
     }
 
     ul {
@@ -103,6 +105,8 @@
 
       .resultado {
         max-height: 200px; /* Limita la altura de los resultados en pantallas pequeñas */
+        width: 100%; /* Ancho completo en móviles */
+        max-width: none; /* Evita que el ancho se limite */
       }
     }
 
